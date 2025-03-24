@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Row } from '@components/Helpers';
 
-export const RootPage = styled.div`
+export let RootPage = styled.div`
     position: absolute;
     top: 0;
     left: 0;
@@ -19,7 +19,7 @@ export const RootPage = styled.div`
     }
 `;
 
-export const HeroSection = styled.div`
+export let HeroSection = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,7 +66,7 @@ export const HeroSection = styled.div`
     }
 `;
 
-export const Img = styled.img<{width: string, mWidth?: string}>`
+export let Img = styled.img<{width: string, mWidth?: string}>`
     width: ${(props) => props.width ? props.width : 'auto'};
     ${(props) => props.mWidth ? 
         css`
@@ -77,7 +77,7 @@ export const Img = styled.img<{width: string, mWidth?: string}>`
     : css``};
 `;
 
-export const Heading = styled(Row)`
+export let Heading = styled(Row)`
     .heading {
         font-size: 70px;
         line-height: 48px;
