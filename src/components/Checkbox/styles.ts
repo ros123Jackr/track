@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { PlunkProps } from '@primitives';
 import { CheckmarkWrapperProps } from './types';
 
-const BOX_SIZE = 20;
+let BOX_SIZE = 20;
 
-export const CheckboxLabel = styled.label`
+export let CheckboxLabel = styled.label`
     position: relative;
     width: ${BOX_SIZE}px;
     height: ${BOX_SIZE}px;
@@ -30,7 +30,7 @@ export const CheckboxLabel = styled.label`
     }
 `;
 
-export const CheckmarkWrapper = styled.div<CheckmarkWrapperProps>`
+export let CheckmarkWrapper = styled.div<CheckmarkWrapperProps>`
     width: 20px;
     height: 20px;
     overflow: hidden;
