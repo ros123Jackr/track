@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { generateTextStyle } from '@utils';
 import { TypographyProps } from './types';
 
-export const TypographyWrapper = styled.div<TypographyProps>`
+export let TypographyWrapper = styled.div<TypographyProps>`
     ${(props) => generateTextStyle(props.fontType, props.fontSize, props.fontWeight, props.color)};
     ${(props) =>
         props.overflow &&
@@ -22,7 +22,7 @@ export const TypographyWrapper = styled.div<TypographyProps>`
         `};
 `;
 
-export const ParagraphWrapper = styled.p<TypographyProps>`
+export let ParagraphWrapper = styled.p<TypographyProps>`
     ${(props) => generateTextStyle(props.fontType, props.fontSize, props.fontWeight, props.color)};
     ${(props) =>
         props.overflow &&
@@ -42,7 +42,7 @@ export const ParagraphWrapper = styled.p<TypographyProps>`
         `};
 `;
 
-export const SpanWrapper = styled.span<TypographyProps>`
+export let SpanWrapper = styled.span<TypographyProps>`
     ${(props) => generateTextStyle(props.fontType, props.fontSize, props.fontWeight, props.color)};
     ${(props) =>
         props.overflow &&
