@@ -2,7 +2,7 @@ import { addons } from '@storybook/addons';
 import { create } from '@storybook/theming';
 import Logo from './images/logo.png';
 
-const theme =  create({
+let theme =  create({
     base: 'dark',
 
     appBg: '#161616',
