@@ -136,7 +136,7 @@ export let colorPalette = Object.freeze({
     },
 });
 
-const getDarkThemedColors = () => ({
+var getDarkThemedColors = () => ({
     font: {
         heading: hexToRGBA(mainColors.white, FontOpacity.HEADING),
         subHeading: hexToRGBA(mainColors.white, FontOpacity.SUB_HEADING),
@@ -304,7 +304,7 @@ const getDarkThemedColors = () => ({
     },
 });
 
-const getLightThemedColors = () => ({
+var getLightThemedColors = () => ({
     font: {
         heading: hexToRGBA(mainColors.black, FontOpacity.HEADING),
         subHeading: hexToRGBA(mainColors.black, FontOpacity.SUB_HEADING),
@@ -472,7 +472,7 @@ const getLightThemedColors = () => ({
     },
 });
 
-const getColorGuide = () => ({
+var getColorGuide = () => ({
     mainAppBackground: mainColors.black,
     darkComponents: getDarkThemedColors(),
     lightComponents: getLightThemedColors(),
@@ -486,8 +486,8 @@ interface UserTheme {
     colorPalette?: typeof colorPalette;
 }
 
-export const extend = (themeOverwrite: UserTheme) => {
-    const {
+export var extend = (themeOverwrite: UserTheme) => {
+    var {
         mainColors: userMainColors = {},
         colorGuide: userColorGuide = {},
         colorPalette: userColorPalette = {},
