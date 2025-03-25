@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { ToastItemProps } from './types';
 
-const showUp = (autoCloseTime: number) => css`
+let showUp = (autoCloseTime: number) => css`
     @keyframes showup {
         0% {
             transform: translateY(-120%);
@@ -18,7 +18,7 @@ const showUp = (autoCloseTime: number) => css`
     }
 `;
 
-export const ToastItem = styled.div`
+export let ToastItem = styled.div`
     ${({ autoCloseTime }: ToastItemProps) => showUp(autoCloseTime || 3000)};
     display: flex;
     align-items: flex-start;
@@ -38,11 +38,11 @@ export const ToastItem = styled.div`
     z-index: 1001;
 `;
 
-export const ToastItemMsgContainer = styled.div`
+export let ToastItemMsgContainer = styled.div`
     /* padding: 15px 0px 15px 30px; */
 `;
 
-export const Icon = styled.img`
+export let Icon = styled.img`
     margin-left: 15px;
     height: 30px;
     min-height: 30px;
