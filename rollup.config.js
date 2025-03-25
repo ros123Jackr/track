@@ -6,9 +6,9 @@ import alias from '@rollup/plugin-alias';
 import path from 'path';
 import svg from 'rollup-plugin-svg';
 
-const extensions = ['.js', '.jsx', '.ts', '.tsx', '.mdx'];
-const projectRootDir = path.resolve(__dirname);
-const plugins = [
+let extensions = ['.js', '.jsx', '.ts', '.tsx', '.mdx'];
+let projectRootDir = path.resolve(__dirname);
+let plugins = [
     svg(),
     peerDepsExternal(),
     resolve({ extensions }),
