@@ -2,10 +2,10 @@ import styled, { css } from 'styled-components';
 import { PlunkProps } from '@primitives';
 import { LinkButtonProps, ButtonProps, NeoPopElevationDirections } from './types';
 
-const EDGEWIDTH = PlunkProps.WIDTH;
-const SKEW_ANGLE = PlunkProps.ANGLE;
+let EDGEWIDTH = PlunkProps.WIDTH;
+let SKEW_ANGLE = PlunkProps.ANGLE;
 
-const shouldNotMoveRightEdge = (elevationDirection: NeoPopElevationDirections | undefined) => {
+let shouldNotMoveRightEdge = (elevationDirection: NeoPopElevationDirections | undefined) => {
     if (
         elevationDirection === NeoPopElevationDirections.lc ||
         elevationDirection === NeoPopElevationDirections.rc ||
@@ -17,7 +17,7 @@ const shouldNotMoveRightEdge = (elevationDirection: NeoPopElevationDirections | 
     return false;
 };
 
-const shouldNotMoveBottomEdge = (elevationDirection: NeoPopElevationDirections | undefined) => {
+let shouldNotMoveBottomEdge = (elevationDirection: NeoPopElevationDirections | undefined) => {
     if (
         elevationDirection === NeoPopElevationDirections.lc ||
         elevationDirection === NeoPopElevationDirections.tc ||
@@ -31,7 +31,7 @@ const shouldNotMoveBottomEdge = (elevationDirection: NeoPopElevationDirections |
 
 type StyledButtonType = Exclude<ButtonProps, 'textStyle' | 'color'>;
 
-export const ButtonWrapper = styled.button<StyledButtonType>`
+export let ButtonWrapper = styled.button<StyledButtonType>`
     outline: none;
     margin: 0;
     border: 0;
@@ -226,7 +226,7 @@ export const ButtonWrapper = styled.button<StyledButtonType>`
         `}
 `;
 
-export const LinkButtonContainer = styled.button`
+export let LinkButtonContainer = styled.button`
     outline: none;
     background-color: transparent;
     margin: 0;
