@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { SearchBarColorConfig } from './types';
 
-export const SearchBarContainer = styled.div`
+export let SearchBarContainer = styled.div`
     display: flex;
     padding: 11px 15px;
     align-items: center;
