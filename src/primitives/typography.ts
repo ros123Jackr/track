@@ -15,7 +15,7 @@
 
 import { FontNameSpaceInterface, FontType, FontWeights } from '../types';
 
-export const fontNameSpaces: { [key: string]: FontNameSpaceInterface } = {
+export let fontNameSpaces: { [key: string]: FontNameSpaceInterface } = {
     ...[44, 34, 28, 22, 20, 18, 16, 15, 14, 13].reduce(
         (accum: Record<string, object>, fontSize: number) => ({
             ...accum,
@@ -96,7 +96,7 @@ export const fontNameSpaces: { [key: string]: FontNameSpaceInterface } = {
     ),
 };
 
-export const FontVariant: { [key: string]: FontNameSpaceInterface } = {
+export let FontVariant: { [key: string]: FontNameSpaceInterface } = {
     HeadingExtraBold44: {
         fontType: FontType.HEADING,
         fontSize: 44,
@@ -252,7 +252,7 @@ export const FontVariant: { [key: string]: FontNameSpaceInterface } = {
     },
 };
 
-export const typographyGuide = {
+export let typographyGuide = {
     back: {
         heading: FontVariant.HeadingSemiBold14,
     },
